@@ -1,0 +1,12 @@
+<ion-content>
+  <div class="center-container">
+    <div class="ion-padding-vertical">
+      <ion-card class="ion-text-center card-background">
+        <ion-card class="fotoo" *ngIf="usuario">
+            Tu contraseña es: {{ usuario.password }}
+        </ion-card>
+        <ion-button (click)="navegarALogin()">Volver al Login</ion-button>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

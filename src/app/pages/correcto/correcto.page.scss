@@ -1,0 +1,99 @@
+ion-content {
+  --padding-top: 20px; /* Ajusta el padding para pantallas más pequeñas */
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+
+ion-card {
+  --background: rgba(255, 255, 255, 0.541);
+  border-radius: 10px;
+  padding: 70px;
+  box-shadow: 0 4px 8px rgb(7, 22, 54);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+
+}
+
+ion-item {
+  --padding-bottom: 15px; 
+  --background: rgba(255, 255, 255, 0.514);    
+  border-radius: 9px; 
+  color: #000000; 
+  height: 65px; 
+  display: flex; 
+  align-items: center; 
+}
+
+.center-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+.card-background {
+  background-image: url('../../../assets/img/m.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #000000; 
+  height: 450px;
+}
+
+ion-card-header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px; 
+}
+
+ion-input {
+  color: #000000; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold; 
+}
+
+ion-button {
+  color: #ffffff; 
+  --background: #031a30;
+  font-size: 14px;
+  padding: 10px 60px;
+  border-radius: 20px;
+
+  margin-top: 25px; 
+}
+
+
+.negrita {
+  font-weight: bold; 
+  color: #000000; 
+  font-size: 10px; 
+  margin: 0; 
+}
+
+
+.card-background {
+  width: 100%;
+  max-width: 400px;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+.fotoo {
+  width: 90%; /* Ajusta el ancho para abarcar más de derecha a izquierda */
+  max-width: 600px; /* Ancho máximo aumentado */
+  padding: 20px; /* Ajusta el padding si es necesario */
+  background: rgba(255, 255, 255, 0.788); 
+  border-radius: 200px; 
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px; /* Desplaza el elemento hacia abajo */
+  font-weight: bold; /* Poner el texto en negrita */
+  font-size: 18px; /* Aumentar el tamaño del texto */
+  color: #000000;
+}
+

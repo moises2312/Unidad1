@@ -1,0 +1,91 @@
+ion-content {
+    --padding-top: 20px; /* Ajusta el padding para pantallas más pequeñas */
+    --padding-bottom: 20px;
+    --padding-end: 20px;
+    --padding-start: 20px;
+  }
+
+  ion-card {
+    --background: rgba(255, 255, 255, 0.541); /* Fondo semi-transparente */
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgb(7, 22, 54);
+  }
+  
+  ion-item {
+    --padding-bottom: 15px; 
+    --background: rgba(255, 255, 255, 0.514);    
+    border-radius: 9px; 
+    color: #000000; 
+    height: 65px; 
+    display: flex; 
+    align-items: center; 
+  }
+  
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  
+  .center-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 90vh; 
+  }
+  
+  h1 {
+    font-size: 18px;
+    color: #000000; 
+    font-weight: bold; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center; 
+  }
+  
+  .card-background {
+    position: relative;
+    background-image: url('../../../assets/img/pao.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000000; 
+    padding: 20px; 
+  }
+  
+  ion-card-header {
+    text-align: center;
+  }
+
+  ion-toolbar {
+    font-size: 15px;
+    --background: #031a30;     
+    border-radius: 10px; 
+    height: 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  ion-input {
+    color: #000000; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold; 
+  }
+  
+  ion-button {
+    color: #ffffff; 
+    --background: #031a30;     
+    font-size: 14px;
+    padding: 1px 110px; 
+    border-radius: 20px; 
+  }
+  
+  ion-label a {
+    color: #ffffff; 
+    text-decoration: none;
+  }
+  
+  ion-label a:hover {
+    text-decoration: underline; //linea para pasar el mouse en recuperar
+  }
+  
+  

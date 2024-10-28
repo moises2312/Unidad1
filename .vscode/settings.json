@@ -1,0 +1,9 @@
+{
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "@ionic/angular/common",
+    "@ionic/angular/standalone"
+  ],
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.shellIntegration.enabled": false
+}

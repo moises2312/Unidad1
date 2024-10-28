@@ -1,0 +1,66 @@
+<ion-app>
+  <ion-header [translucent]="true">
+    <ion-toolbar class="custom-toolbar">
+      <ion-title #titulo class="ion-text font-size" style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="bienvenida">
+          <span style="margin: 0 20px;">|</span>
+          <span style="flex: 1; text-align: left;">Sistema de Asistencia DUOC</span>
+          <span style="margin: 0 20px;">|</span>
+        </div>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <br><br>
+    <b class="ion-text-center">
+      <h4>¡Bienvenido(a) </h4>
+      <p>{{ usuario.nombre }} {{ usuario.apellido }}</p>
+    </b>
+    <ion-tabs>
+      <ion-tab-bar slot="top"> <!-- Cambia slot a "top" para que esté sobre el h4 -->
+        <ion-tab-button (click)="navegar('/inicio')"  tab="home">
+          <ion-icon name=""></ion-icon>
+          <ion-label>Inicio</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="navegar('/miclase')"  tab="settings">
+          <ion-icon name=""></ion-icon>
+          <ion-label>Mi clase</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="navegar('/misdatos')"  tab="profile">
+          <ion-icon name=""></ion-icon>
+          <ion-label>Mis datos</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+
+    <br>
+    <p>Escanea el QR para registrar tu asistencia</p>
+
+    <!-- Video y Canvas para escaneo QR -->
+    <ion-card class="custom-card">
+      <video #video style="display: none;"></video>
+      <canvas #canvas style="display: none;"></canvas>
+
+      <img 
+        src="../../../assets/img/qr.jpg" 
+        alt="Escanea" 
+        style="cursor: pointer; width: 300px; height: auto;" 
+        (click)="navegar('/qr')"/>
+
+      <div *ngIf="datosQR" class="ion-text-center">
+        <h4>Datos Escaneados:</h4>
+        <p>{{ datosQR }}</p>
+      </div>
+    </ion-card>
+    <br>
+    <ion-button shape="round" size="medium" class="ion-button" (click)="navegar('/login')"  color="warning">
+      Cerrar sesión
+    </ion-button>
+  </ion-content>
+</ion-app>

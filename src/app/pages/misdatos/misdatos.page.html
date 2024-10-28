@@ -1,0 +1,151 @@
+  <ion-header>
+    <ion-toolbar class="custom-toolbar">
+      <ion-title #titulo class="ion-text font-size">
+        <div class="bienvenida">
+          <span style="margin: 0 20px;">
+            |
+          </span>
+          <span>
+            Sistema de Asistencia DUOC
+          </span>
+          <span style="margin: 0 20px;">
+            |
+          </span>
+        </div>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal">
+
+  <br>
+  <b class="ion-text-center">
+    <h4>Mis datos</h4>
+  </b>
+
+  <ion-item #itemCuenta>
+    <ion-input 
+    [(ngModel)]="usuario.cuenta" 
+    labelPlacement="floating" 
+    label="Cuenta" placeholder="EJ: Atorres"></ion-input>
+  </ion-item>
+  <ion-item #itemNombre>
+    <ion-input [(ngModel)]="usuario.nombre" 
+    labelPlacement="floating" 
+    label="Nombre" placeholder="EJ: Ana"></ion-input>
+  </ion-item>
+  <ion-item #itemApellido>
+    <ion-input [(ngModel)]="usuario.apellido" 
+    labelPlacement="floating" 
+    label="Apellido" placeholder="EJ: Leiva"></ion-input>
+  </ion-item>
+  <ion-item #itemCorreo>
+    <ion-input [(ngModel)]="usuario.correo" 
+    labelPlacement="floating" 
+    label="Correo" placeholder="EJ: atorres@duocuc.cl"></ion-input>
+  </ion-item>
+  <ion-item #itemPreguntaSecreta>
+    <ion-input [(ngModel)]="usuario.preguntaSecreta" 
+    labelPlacement="floating" 
+    label="Pregunta secreta" placeholder="EJ: ¿Cuál es tu animal favorito?"></ion-input>
+  </ion-item>
+
+  <ion-item #itemRespuestaSecreta>
+    <ion-input [(ngModel)]="usuario.respuestaSecreta" 
+    labelPlacement="floating" 
+    label="Respuesta secreta" placeholder="EJ: gato"></ion-input>
+  </ion-item>
+
+  <ion-item #itemEducacion> 
+    <ion-label position="floating">Educacion</ion-label>
+    <ion-select placaeholder="Seleccione nivel"
+        [(ngModel)]="usuario.nivelEducacional!.id">
+      <ion-select-option
+          *ngFor="let nivel of listaNivelesEducacionales"
+              [value]="nivel.id">
+          {{ nivel.nombre }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item #itemFechaNacimiento>
+    <table>
+      <tr>
+        <td class="fon-size-12">
+          Nacimiento
+        </td>
+        <td class="cell-align-right">
+          <input 
+              matInput
+              [matDatepicker]="fechaNacimiento"
+              [(ngModel)]="usuario.fechaNacimiento"
+              placeholder="dd/mm/yyyy"
+              class="date-width">
+        </td>
+        <td class="cell-width-0">
+          <mat-datepicker-toggle
+              matSuffix [for]="fechaNacimiento"></mat-datepicker-toggle>
+          <mat-datepicker #fechaNacimiento></mat-datepicker>
+        </td>
+      </tr>
+    </table>
+  </ion-item>
+
+  <ion-item #itemPassword>
+    <ion-input [(ngModel)]="usuario.password" 
+    labelPlacement="floating" 
+    label="Contraseña"> </ion-input>
+  </ion-item>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        <ion-button (click)="limpiar1()" shape="block" size="small">
+          Limpiar
+        </ion-button>
+      </ion-col>
+      <ion-col col-3>
+        <ion-button (click)="mostrarDatosPersonales()" shape="block" size="small">
+          Actualizar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar color="primary" class="ion-text-center">
+
+    <ion-button shape="round" size="small" (click)="navegar('/inicio')" color="medium">
+      <ion-icon slot="start" name="home"></ion-icon>
+      Inicio
+    </ion-button>
+    &nbsp;&nbsp;&nbsp;
+    <ion-col>
+      <ion-button shape="round" size="small" (click)="navegar('/miclase')" color="medium">
+        <ion-icon slot="start" name="school"></ion-icon>
+        Mi Clase
+      </ion-button>
+    </ion-col>
+
+    <ion-col>
+      <ion-button shape="round" size="small" (click)="navegar('/misdatos')" color="medium">
+        <ion-icon slot="start" name="person"></ion-icon>
+        Mis Datos
+      </ion-button>
+    </ion-col>
+
+    &nbsp;&nbsp;&nbsp;
+
+    <ion-button fill="outline" size="small" shape="round" (click)="navegar('/login')" color="light">
+      <ion-icon slot="start" name="log-out"></ion-icon>
+      Salir
+    </ion-button>
+
+  </ion-toolbar>
+</ion-footer>

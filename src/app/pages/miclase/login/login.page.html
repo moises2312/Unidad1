@@ -1,0 +1,53 @@
+
+<ion-header ></ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal page" #page>
+  <div class="center-container">
+    <div class="ion-padding-vertical">
+      <ion-card class="ion-text-center card-background">
+        <ion-card-content>
+          <ion-card-header>
+            <img src="../../../assets/img/Duoc.png" alt="">
+            <br>
+            <ion-toolbar>
+              Sistema de Asistencia Duoc UC
+            </ion-toolbar>
+            <br>
+          </ion-card-header>
+
+          <ion-item>
+            <ion-input [(ngModel)]="usuario.cuenta" labelPlacement="floating" label="Cuenta"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-input [(ngModel)]="usuario.password" type="password" labelPlacement="floating" label="Contraseña"></ion-input>
+          </ion-item>
+          <br>
+          <!-- boton -->
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" class="centrar">
+                <ion-button shape="block" size="small" (click)="ingresar()">
+                  <ion-icon name="log-in"></ion-icon>
+                  Ingresar
+                </ion-button>
+              </ion-col>
+            </ion-row>
+            <br>
+            <br>
+            <!-- link para quien olvido su contraseña -->
+            <ion-label>
+              <a (click)="ingresarValidarCorreo()">Recuperar contraseña</a>
+            </ion-label>
+            <br>
+            <br>
+          </ion-grid>
+
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+
+
+<ion-footer></ion-footer>
